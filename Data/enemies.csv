@@ -1,0 +1,4 @@
+id,name,hp,speed,screen_time,ttk_laser
+enm_scout,Scout Drone,20,400,4.8,0.4
+enm_cruiser,Armored Cruiser,160,120,16,3.2
+enm_alien,Alien,100,200,10,1.0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://crohjtohu8oa2"
+
+[deps]
+
+files=["res://Data/weapons.name.translation", "res://Data/weapons.damage.translation", "res://Data/weapons.fire.translation", "res://Data/weapons.dps.translation"]
+
+source_file="res://Data/weapons.csv"
+dest_files=["res://Data/weapons.name.translation", "res://Data/weapons.damage.translation", "res://Data/weapons.fire.translation", "res://Data/weapons.dps.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

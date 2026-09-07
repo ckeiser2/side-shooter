@@ -1,0 +1,4 @@
+id,name,damage,fire_rate,dps
+wpn_laser,Pulse Laser,10,0.2,50
+wpn_plasma,Plasma Cannon,35,0.6,58.33333333
+wpn_rocket,Heavy Rocket,90,1.5,60

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://2v23tvw40h85"]
+
+[ext_resource type="Texture2D" uid="uid://bcmn63datvx3n" path="res://Assets/ship.png" id="1_3k1ca"]
+[ext_resource type="Script" uid="uid://dk76og4x8bbxb" path="res://Scripts/player_ship.gd" id="1_6s7s7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6s7s7"]
+size = Vector2(124, 74)
+
+[node name="PlayerShip" type="CharacterBody2D" unique_id=634865129 groups=["Player"]]
+script = ExtResource("1_6s7s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=663617986]
+texture = ExtResource("1_3k1ca")
+
+[node name="WeaponLabel" type="Label" parent="." unique_id=702605605]
+offset_left = -39.0
+offset_top = -61.0
+offset_right = 51.0
+offset_bottom = -38.0
+text = "No Weapon"
+
+[node name="FireTimer" type="Timer" parent="." unique_id=1102474292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242816684]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_6s7s7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=668496392]
+
+[connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

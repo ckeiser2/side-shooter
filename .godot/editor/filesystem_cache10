@@ -1,0 +1,46 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1788730973
+icon.svg::CompressedTexture2D::8251383771270911960::1788632607::1788632616::1::::<><><>0<>0<>46198fb3e0772ee935e0ac56e99fa076<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1788734801
+alien.png::CompressedTexture2D::2057554178894279857::1788730442::1788730443::1::::<><><>0<>0<>c79180c81527171a67d835fdd67ab403<>res://.godot/imported/alien.png-29897ce81d94b6d36d444bfe57bcb32f.ctex::
+asteroid.png::CompressedTexture2D::3884304836901072654::1788732678::1788732679::1::::<><><>0<>0<>5b604fc89dc53fc72b429cf6b8f9d428<>res://.godot/imported/asteroid.png-e7235b6d9b0003e292eb07fb795783f7.ctex::
+blank_background.png::CompressedTexture2D::4024977553342558212::1788724955::1788724955::1::::<><><>0<>0<>154dea06669121d90e2499c02b8cfc92<>res://.godot/imported/blank_background.png-0de4869e964291ef0378f4f8c21e24e8.ctex::
+obstacle1.png::CompressedTexture2D::4899166813136641016::1788734801::1788734801::1::::<><><>0<>0<>49c71e7ffda0d291972b92495327cf19<>res://.godot/imported/obstacle1.png-6c3b368ca370b22f2974baf66b789f21.ctex::
+ParticleEffect.gdshader::Shader::8558387987169644979::1788729807::0::1::::<><><>0<>0<><>::
+particles.png::CompressedTexture2D::192075567694937510::1788726740::1788726741::1::::<><><>0<>0<>37993a97edd258b5e97c129972188a5b<>res://.godot/imported/particles.png-f5449d0c6154ebe5d20189e96a9bc1c4.ctex::
+projectile.png::CompressedTexture2D::7212266402423585991::1788734388::1788734389::1::::<><><>0<>0<>b13d98fae249312fd8ad36b3f382fa48<>res://.godot/imported/projectile.png-a06bb81b134194ca5b0d984041e0f3d3.ctex::
+ship.png::CompressedTexture2D::2552417059849359545::1788728027::1788728027::1::::<><><>0<>0<>8e915051c5f050ac785c86a77f92ba74<>res://.godot/imported/ship.png-925640061b5e3260a2dfe6b5d95f2dc9.ctex::
+star.png::CompressedTexture2D::2929876324597029398::1788734796::1788734796::1::::<><><>0<>0<>2384628838b142870f230402afb012b6<>res://.godot/imported/star.png-59a17f0ff6ffca9363606061d3940469.ctex::
+::res://Assets/Music/::1788733886
+1. Track 1.wav::AudioStreamWAV::3416608667209793677::1788733884::1788733885::1::::<><><>0<>0<>7cf2c111a87f197d08f1c65b5b58b980<>res://.godot/imported/1. Track 1.wav-eb0b65fa9ba16c28f5404159d7d4277e.sample::
+2. Track 2.wav::AudioStreamWAV::1729463891693895594::1788733884::1788733885::1::::<><><>0<>0<>bed2d1f4c1c682638a20be192933133b<>res://.godot/imported/2. Track 2.wav-606ea5f5dfdaf42a05b6d41ba889ecff.sample::
+3. Track 3.wav::AudioStreamWAV::5736579784587417318::1788733884::1788733885::1::::<><><>0<>0<>8f9f49982749d4dfa05e80bd461832c2<>res://.godot/imported/3. Track 3.wav-4b69c6a23e34568c5eb6093bb4e1d632.sample::
+4. Track 4.wav::AudioStreamWAV::2365979855016934603::1788733884::1788733886::1::::<><><>0<>0<>bf09730ecfd12aedd949cb592128b387<>res://.godot/imported/4. Track 4.wav-b850850542d9edd29cf82dfb7fcdf9b6.sample::
+5. Track 5.wav::AudioStreamWAV::7202504896125263151::1788733884::1788733885::1::::<><><>0<>0<>b4dd963ea10ea4cb9c27d18387d469f6<>res://.godot/imported/5. Track 5.wav-ab1c44bbbb400a9addc97a1b73ed52c0.sample::
+6. Track 6.wav::AudioStreamWAV::8541985440319633151::1788733884::1788733885::1::::<><><>0<>0<>068db048ceb57d860ef4e603897ea53c<>res://.godot/imported/6. Track 6.wav-c218d507dbf326ccc314de8d0da1787a.sample::
+7. Track 7.wav::AudioStreamWAV::4227954021104246909::1788733884::1788733885::1::::<><><>0<>0<>3e1aef89c38f160f92604471af8f0d31<>res://.godot/imported/7. Track 7.wav-de00cdfa94a49b96b31344beea6de8bc.sample::
+10. Track 10.wav::AudioStreamWAV::7085323141522376931::1788733884::1788733885::1::::<><><>0<>0<>46c132c7f37fe3fb89527de8aa5aaa7c<>res://.godot/imported/10. Track 10.wav-5bacac6dbc37caf5d849e3d0e64b28d5.sample::
+::res://Data/::1788730974
+enemies.csv::Translation::4160767348773540214::1788730551::1788730974::1::::<><><>0<>0<>23b8a2d12ab33464e9533c3fff713a94<>res://Data/enemies.name.translation<*>res://Data/enemies.hp.translation<*>res://Data/enemies.speed.translation<*>res://Data/enemies.screen.translation<*>res://Data/enemies.ttk.translation::
+enemies.hp.translation::OptimizedTranslation::3050564956212121980::1788730974::0::1::::<><><>0<>0<><>::
+enemies.name.translation::OptimizedTranslation::1811539723228062487::1788730974::0::1::::<><><>0<>0<><>::
+enemies.screen.translation::OptimizedTranslation::236218752418218875::1788730974::0::1::::<><><>0<>0<><>::
+enemies.speed.translation::OptimizedTranslation::3408935975549462587::1788730974::0::1::::<><><>0<>0<><>::
+enemies.ttk.translation::OptimizedTranslation::7667538386357394153::1788730974::0::1::::<><><>0<>0<><>::
+weapons.csv::Translation::5995395108801101307::1788730551::1788730974::1::::<><><>0<>0<>c8616b34ad9ac578849449c9683e53ee<>res://Data/weapons.name.translation<*>res://Data/weapons.damage.translation<*>res://Data/weapons.fire.translation<*>res://Data/weapons.dps.translation::
+weapons.damage.translation::OptimizedTranslation::9124600320480806198::1788730974::0::1::::<><><>0<>0<><>::
+weapons.dps.translation::OptimizedTranslation::1084864957654928720::1788730974::0::1::::<><><>0<>0<><>::
+weapons.fire.translation::OptimizedTranslation::7959044756134530551::1788730974::0::1::::<><><>0<>0<><>::
+weapons.name.translation::OptimizedTranslation::6777301789902408923::1788730974::0::1::::<><><>0<>0<><>::
+::res://Scenes/::1788734735
+alien.tscn::PackedScene::6169920278250273435::1788731182::0::1::::<><><>0<>0<><>::uid://4kxu76lckq4h::::res://Assets/alien.png<>uid://j3jdy7e7pm2l::::res://Scripts/enemy.gd
+data_loader.tscn::PackedScene::3522321078811479303::1788721125::0::1::::<><><>0<>0<><>::uid://bpcm0xls7w12m::::res://Scripts/data_loader.gd
+level.tscn::PackedScene::17402326663222169::1788734287::0::1::::<><><>0<>0<><>::uid://bxly163qfcxrg::::res://Assets/blank_background.png<>uid://2v23tvw40h85::::res://Scenes/player_ship.tscn<>uid://ct50xkqx85ukx::::res://Scenes/alien.tscn<>uid://dau7g6ccvkptn::::res://Assets/Music/5. Track 5.wav<>uid://bvlt6yy56u5cc::::res://Assets/asteroid.png
+logic_playground.tscn::PackedScene::2269559415108574368::1788721130::0::1::::<><><>0<>0<><>::uid://cb3d65knnt7kx::::res://Scripts/logic_playground.gd
+player_ship.tscn::PackedScene::1940141103520031668::1788731848::0::1::::<><><>0<>0<><>::uid://bcmn63datvx3n::::res://Assets/ship.png<>uid://dk76og4x8bbxb::::res://Scripts/player_ship.gd
+asteroid.tscn::PackedScene::7276475942365746727::1788734735::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1788731103
+data_loader.gd::GDScript::3444156568423924282::1788721124::0::1::::<>Node<><>0<>0<><>::
+enemy.gd::GDScript::690055290391831625::1788731103::0::1::::<>RigidBody2D<><>0<>0<><>::
+logic_playground.gd::GDScript::4901071890484624883::1788718616::0::1::::<>Node<><>0<>0<><>::
+player_ship.gd::GDScript::7929118164508552779::1788728482::0::1::::<>CharacterBody2D<><>0<>0<><>::

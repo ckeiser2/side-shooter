@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqgid4i8t8h5x"]
+
+[ext_resource type="Script" uid="uid://bpcm0xls7w12m" path="res://Scripts/data_loader.gd" id="1_5tapr"]
+
+[node name="DataLoader" type="Node" unique_id=912615379]
+script = ExtResource("1_5tapr")

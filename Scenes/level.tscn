@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://iou4r6e6vdh"]
+
+[ext_resource type="Texture2D" uid="uid://bxly163qfcxrg" path="res://Assets/blank_background.png" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://2v23tvw40h85" path="res://Scenes/player_ship.tscn" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://ct50xkqx85ukx" path="res://Scenes/alien.tscn" id="3_6phgx"]
+[ext_resource type="AudioStream" uid="uid://dau7g6ccvkptn" path="res://Assets/Music/5. Track 5.wav" id="3_wqkje"]
+[ext_resource type="Texture2D" uid="uid://bvlt6yy56u5cc" path="res://Assets/asteroid.png" id="4_81xng"]
+[ext_resource type="PackedScene" uid="uid://dv2x17r48k6bx" path="res://Scenes/star.tscn" id="6_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://dbw1q38ucynn0" path="res://Scenes/asteroid.tscn" id="7_754fn"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k5f4k"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1000, 1000, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 0)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 0.9999839
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 4.9999976
+scale_max = 5.0
+
+[node name="Level" type="Node2D" unique_id=848729001]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1383590401]
+offset_left = -12060.0
+offset_top = -9152.0
+offset_right = -7881.8726
+offset_bottom = -5764.0
+scale = Vector2(19.395237, 21.749447)
+texture = ExtResource("1_k5f4k")
+stretch_mode = 1
+
+[node name="PlayerShip" parent="." unique_id=634865129 instance=ExtResource("2_6phgx")]
+position = Vector2(75, 500)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="PlayerShip" unique_id=1064449431]
+position = Vector2(507, -139)
+rotation = 3.1415927
+scale = Vector2(5.2169404, -3.6503236)
+stream = ExtResource("3_wqkje")
+volume_db = -30.0
+pitch_scale = 0.9
+autoplay = true
+
+[node name="ParticleContainer" type="Node2D" parent="PlayerShip" unique_id=1724819902]
+position = Vector2(-77, -502)
+scale = Vector2(1.2799993, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="PlayerShip/ParticleContainer" unique_id=1153988857]
+position = Vector2(456.25027, 363)
+scale = Vector2(-4.075737, 3.6503236)
+amount = 500
+lifetime = 15.0
+preprocess = 10.0
+process_material = SubResource("ParticleProcessMaterial_k5f4k")
+
+[node name="Alien" parent="." unique_id=1812918639 instance=ExtResource("3_6phgx")]
+position = Vector2(1105, 199)
+
+[node name="Alien2" parent="." unique_id=961893478 instance=ExtResource("3_6phgx")]
+position = Vector2(1203, -1298)
+
+[node name="Alien3" parent="." unique_id=1889654738 instance=ExtResource("3_6phgx")]
+position = Vector2(-1810, -973)
+
+[node name="AsteroidContainer" type="Node2D" parent="." unique_id=1888078836]
+position = Vector2(-4939, -27)
+rotation = -3.1415925
+scale = Vector2(5.216941, -3.650324)
+
+[node name="Sprite2D" type="Sprite2D" parent="AsteroidContainer" unique_id=718070062]
+position = Vector2(83.57388, 38.352783)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D2" type="Sprite2D" parent="AsteroidContainer" unique_id=623961079]
+position = Vector2(80.31531, -344.07907)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D3" type="Sprite2D" parent="AsteroidContainer" unique_id=1169628546]
+position = Vector2(86.83246, 416.1275)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D4" type="Sprite2D" parent="AsteroidContainer" unique_id=1557233430]
+position = Vector2(83.5738, 817.4618)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D5" type="Sprite2D" parent="AsteroidContainer" unique_id=1590764069]
+position = Vector2(-167.14789, 1018.2657)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D8" type="Sprite2D" parent="AsteroidContainer" unique_id=1433318658]
+position = Vector2(-528.47076, 1008.67737)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D9" type="Sprite2D" parent="AsteroidContainer" unique_id=1212707406]
+position = Vector2(-886.3433, 1022.9226)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D10" type="Sprite2D" parent="AsteroidContainer" unique_id=907325194]
+position = Vector2(-1244.2158, 1032.5107)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D11" type="Sprite2D" parent="AsteroidContainer" unique_id=2135836839]
+position = Vector2(-1632.1826, 1051.687)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D12" type="Sprite2D" parent="AsteroidContainer" unique_id=776956548]
+position = Vector2(-1980.0876, 1032.5105)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D13" type="Sprite2D" parent="AsteroidContainer" unique_id=575495872]
+position = Vector2(-2207.6157, 1046.756)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D14" type="Sprite2D" parent="AsteroidContainer" unique_id=1909137761]
+position = Vector2(-203.95093, -989.5011)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D15" type="Sprite2D" parent="AsteroidContainer" unique_id=1841369386]
+position = Vector2(-541.8884, -979.91296)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D16" type="Sprite2D" parent="AsteroidContainer" unique_id=324340047]
+position = Vector2(-866.21643, -975.256)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D17" type="Sprite2D" parent="AsteroidContainer" unique_id=229515030]
+position = Vector2(-1197.4451, -970.32495)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D18" type="Sprite2D" parent="AsteroidContainer" unique_id=2107104717]
+position = Vector2(-1511.8054, -970.32513)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D19" type="Sprite2D" parent="AsteroidContainer" unique_id=440670752]
+position = Vector2(-1873.1283, -965.6681)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D20" type="Sprite2D" parent="AsteroidContainer" unique_id=2067369926]
+position = Vector2(-2130.7502, -961.01105)
+rotation = 1.5657121
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D6" type="Sprite2D" parent="AsteroidContainer" unique_id=579669469]
+position = Vector2(-2174.071, -654.73694)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D21" type="Sprite2D" parent="AsteroidContainer" unique_id=1532528469]
+position = Vector2(-2180.7803, -291.4814)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D22" type="Sprite2D" parent="AsteroidContainer" unique_id=785421733]
+position = Vector2(-2194.198, 76.70514)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D23" type="Sprite2D" parent="AsteroidContainer" unique_id=493444034]
+position = Vector2(-2200.907, 363.529)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D24" type="Sprite2D" parent="AsteroidContainer" unique_id=952868462]
+position = Vector2(-2197.648, 702.9508)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D25" type="Sprite2D" parent="AsteroidContainer" unique_id=1621450689]
+position = Vector2(-2204.3572, 918.00024)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="Sprite2D7" type="Sprite2D" parent="AsteroidContainer" unique_id=290373018]
+position = Vector2(86.83258, -726.5109)
+scale = Vector2(-0.3366783, 0.86227804)
+texture = ExtResource("4_81xng")
+
+[node name="WallsContainer" type="Node2D" parent="." unique_id=1558987301]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallsContainer" unique_id=181900032]
+position = Vector2(155.99997, 4510.0005)
+rotation = -3.1415925
+scale = Vector2(5.2169404, -3.6503236)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallsContainer/StaticBody2D" unique_id=792949431]
+scale = Vector2(1.0000001, 1.0000002)
+polygon = PackedVector2Array(964.9335, -297.50793, 971.6425, -2142.55, 1322.806, -2180.902, 1342.9327, -302.16486)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WallsContainer" unique_id=1419446445]
+position = Vector2(155.99997, 4510.0005)
+rotation = -3.1415925
+scale = Vector2(5.216941, -3.6503248)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallsContainer/StaticBody2D2" unique_id=1570444601]
+scale = Vector2(0.99999994, 0.9999998)
+polygon = PackedVector2Array(-1108.8873, -2109.128, 964.9335, -2132.9614, 894.5857, -2539.5005, -1162.3668, -2567.9915)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WallsContainer" unique_id=1318774490]
+position = Vector2(155.99997, 4510.0005)
+rotation = -3.1415925
+scale = Vector2(5.216941, -3.6503246)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WallsContainer/StaticBody2D3" unique_id=864777235]
+scale = Vector2(1, 0.9999998)
+polygon = PackedVector2Array(-1108.8873, -2109.128, -1145.6904, -302.16516, -1503.563, -383.52783, -1453.342, -1860.657)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WallsContainer" unique_id=1817030287]
+position = Vector2(155.99997, 4510.0005)
+rotation = -3.1415925
+scale = Vector2(5.216941, -3.650324)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WallsContainer/StaticBody2D4" unique_id=1945858141]
+polygon = PackedVector2Array(971.6422, -311.7531, -1145.6904, -302.16516, -1232.5231, 180.53174, 964.93335, 84.92395)
+
+[node name="Star3" parent="." unique_id=674244907 instance=ExtResource("6_8c0lf")]
+position = Vector2(4034, 2361)
+scale = Vector2(1.002901, 1.121)
+
+[node name="Star4" parent="." unique_id=1953683169 instance=ExtResource("6_8c0lf")]
+position = Vector2(-2359, -2220)
+scale = Vector2(1.002901, 1.121)
+
+[node name="Star5" parent="." unique_id=292186103 instance=ExtResource("6_8c0lf")]
+position = Vector2(3864, -2260)
+scale = Vector2(1.002901, 1.121)
+
+[node name="Star6" parent="." unique_id=1751733348 instance=ExtResource("6_8c0lf")]
+position = Vector2(1067.0002, 1639.9998)
+scale = Vector2(1.002901, 1.121)
+
+[node name="Star7" parent="." unique_id=1139909842 instance=ExtResource("6_8c0lf")]
+position = Vector2(-2706, -83.000046)
+scale = Vector2(1.002901, 1.121)
+
+[node name="Asteroid" parent="." unique_id=1069174953 instance=ExtResource("7_754fn")]
+position = Vector2(2472, -961)
+scale = Vector2(1.9527649, 1)
+
+[node name="Asteroid4" parent="." unique_id=1650348010 instance=ExtResource("7_754fn")]
+position = Vector2(3191, 497)
+scale = Vector2(1.9527649, 1)
+
+[node name="Asteroid5" parent="." unique_id=1016576524 instance=ExtResource("7_754fn")]
+position = Vector2(-306, -1404)
+scale = Vector2(1.9527649, 1)
+
+[node name="Asteroid2" parent="." unique_id=1145445335 instance=ExtResource("7_754fn")]
+position = Vector2(-1631, 1526)
+scale = Vector2(1.9527649, 1)
+
+[node name="Asteroid3" parent="." unique_id=2040753981 instance=ExtResource("7_754fn")]
+position = Vector2(-3218, -1070)
+scale = Vector2(1.9527649, 1)

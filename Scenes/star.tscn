@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dv2x17r48k6bx"]
+
+[ext_resource type="Script" uid="uid://j3jdy7e7pm2l" path="res://Scripts/enemy.gd" id="1_3vu41"]
+[ext_resource type="Texture2D" uid="uid://bh0ivucje5plu" path="res://Assets/star.png" id="1_d0spr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vu41"]
+radius = 6.1674027
+
+[node name="Star" type="Node2D" unique_id=674244907]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=558298162]
+gravity_scale = 0.0
+script = ExtResource("1_3vu41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1606110230]
+position = Vector2(0, 19.000002)
+scale = Vector2(13, 9.809525)
+shape = SubResource("CircleShape2D_3vu41")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=560626040]
+texture = ExtResource("1_d0spr")
