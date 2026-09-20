@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://ct50xkqx85ukx"]
+
+[ext_resource type="Script" uid="uid://df3v466ta1sf0" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://4kxu76lckq4h" path="res://Assets/alien.png" id="2_afpow"]
+[ext_resource type="AudioStream" uid="uid://cfduddb8efd3l" path="res://Assets/cannon_02.wav" id="3_afpow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdm8w"]
+size = Vector2(275, 95)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1f0kj"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.4
+
+[node name="Alien" type="Area2D" unique_id=824246495]
+script = ExtResource("1_1f0kj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493616869]
+position = Vector2(3.5, -9.5)
+shape = SubResource("RectangleShape2D_mdm8w")
+
+[node name="HpLabel" type="Label" parent="." unique_id=1312992829]
+offset_left = -21.0
+offset_top = -95.0
+offset_right = 20.0
+offset_bottom = -72.0
+text = "HP: #"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212876508 groups=["Enemy"]]
+position = Vector2(1, 1)
+texture = ExtResource("2_afpow")
+
+[node name="DeathParticles" type="GPUParticles2D" parent="." unique_id=47636899]
+emitting = false
+amount = 40
+sub_emitter = NodePath(".")
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_1f0kj")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="DeathParticles" unique_id=49874697]
+stream = ExtResource("3_afpow")
+pitch_scale = 0.6
+autoplay = true
+max_distance = 1141.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bgdodkxkrk8sf"]
+
+[ext_resource type="Script" uid="uid://ec5yeieagq6d" path="res://Scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="Texture2D" uid="uid://dgtlutsxhu4i5" path="res://Assets/cannon_ball.png" id="2_ycag2"]
+[ext_resource type="AudioStream" uid="uid://mxwyge2attcb" path="res://Assets/cannon_01.wav" id="3_6afsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oduel"]
+size = Vector2(33, 29)
+
+[node name="Bullet" type="Area2D" unique_id=733056282]
+script = ExtResource("1_oduel")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1108439246]
+position = Vector2(1, -52)
+scale = Vector2(0.25, 0.22265624)
+texture = ExtResource("2_ycag2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132437193]
+position = Vector2(1.5, -51.5)
+scale = Vector2(0.4800008, 0.40000063)
+shape = SubResource("RectangleShape2D_oduel")
+
+[node name="DamageLabel" type="Label" parent="." unique_id=1991825107]
+offset_left = -77.0
+offset_top = -72.0
+offset_right = 77.0
+offset_bottom = -46.0
+theme_override_font_sizes/font_size = 12
+text = "0000"
+horizontal_alignment = 1
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="." unique_id=913836677]
+position = Vector2(1, -52)
+scale = Vector2(0.25, 0.22265624)
+stream = ExtResource("3_6afsh")
+volume_db = -20.0
+pitch_scale = 1.2
+autoplay = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

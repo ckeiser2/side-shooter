@@ -22,9 +22,13 @@ text = "No Weapon"
 [node name="FireTimer" type="Timer" parent="." unique_id=1102474292]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242816684]
-position = Vector2(0, -1)
+position = Vector2(0, 1)
+scale = Vector2(0.97238725, 0.9041705)
 shape = SubResource("RectangleShape2D_6s7s7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=668496392]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1212015128]
+position = Vector2(66, 6)
 
 [connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

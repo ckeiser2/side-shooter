@@ -1,0 +1,17 @@
+enemy_id,wait,y
+enm_scout,1.0,500
+enm_cruiser,1.0,500
+enm_alien,2.0,500
+enm_scout,0.8,500
+enm_alien,3.0,500
+enm_cruiser,3.0,500
+enm_scout,3.0,500
+enm_alien,3.0,500
+enm_cruiser,3.0,500
+enm_alien,3.0,500
+enm_alien,3.0,500
+enm_alien,3.0,500
+enm_scout,3.0,500
+enm_cruiser,3.0,500
+enm_alien,3.0,500
+enm_alien,3.0,500

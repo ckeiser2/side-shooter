@@ -6,10 +6,10 @@ uid="uid://b0jrh3jh0f1uo"
 
 [deps]
 
-files=["res://Data/enemies.name.translation", "res://Data/enemies.hp.translation", "res://Data/enemies.speed.translation", "res://Data/enemies.screen.translation", "res://Data/enemies.ttk.translation"]
+files=["res://Data/enemies.name.translation", "res://Data/enemies.hp.translation", "res://Data/enemies.speed.translation", "res://Data/enemies.screen.translation", "res://Data/enemies.ttk.translation", "res://Data/enemies.texture.translation"]
 
 source_file="res://Data/enemies.csv"
-dest_files=["res://Data/enemies.name.translation", "res://Data/enemies.hp.translation", "res://Data/enemies.speed.translation", "res://Data/enemies.screen.translation", "res://Data/enemies.ttk.translation"]
+dest_files=["res://Data/enemies.name.translation", "res://Data/enemies.hp.translation", "res://Data/enemies.speed.translation", "res://Data/enemies.screen.translation", "res://Data/enemies.ttk.translation", "res://Data/enemies.texture.translation"]
 
 [params]
 

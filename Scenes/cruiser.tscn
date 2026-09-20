@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b350xpbvr1ufq"]
+
+[ext_resource type="Script" uid="uid://df3v466ta1sf0" path="res://Scripts/enemy.gd" id="1_ha47v"]
+[ext_resource type="Texture2D" uid="uid://bga7mfy5t16f5" path="res://Assets/cruiser.png" id="2_ha47v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdm8w"]
+size = Vector2(275, 95)
+
+[node name="Cruiser" type="Area2D" unique_id=824246495]
+script = ExtResource("1_ha47v")
+enemy_id = "enm_cruiser"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493616869]
+position = Vector2(3, 3.999999)
+scale = Vector2(-1.1582032, 1.7346939)
+shape = SubResource("RectangleShape2D_mdm8w")
+
+[node name="HpLabel" type="Label" parent="." unique_id=1312992829]
+offset_left = -21.0
+offset_top = -95.0
+offset_right = 20.0
+offset_bottom = -72.0
+text = "HP: #"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212876508 groups=["Enemy"]]
+position = Vector2(1, 1)
+texture = ExtResource("2_ha47v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

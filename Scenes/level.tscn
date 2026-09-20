@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://iou4r6e6vdh"]
 
+[ext_resource type="Script" uid="uid://conkt85f7h3nc" path="res://Scripts/level.gd" id="1_0f350"]
 [ext_resource type="Texture2D" uid="uid://bxly163qfcxrg" path="res://Assets/blank_background.png" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://2v23tvw40h85" path="res://Scenes/player_ship.tscn" id="2_6phgx"]
-[ext_resource type="PackedScene" uid="uid://ct50xkqx85ukx" path="res://Scenes/alien.tscn" id="3_6phgx"]
 [ext_resource type="AudioStream" uid="uid://dau7g6ccvkptn" path="res://Assets/Music/5. Track 5.wav" id="3_wqkje"]
 [ext_resource type="Texture2D" uid="uid://bvlt6yy56u5cc" path="res://Assets/asteroid.png" id="4_81xng"]
-[ext_resource type="PackedScene" uid="uid://dv2x17r48k6bx" path="res://Scenes/star.tscn" id="6_8c0lf"]
-[ext_resource type="PackedScene" uid="uid://dbw1q38ucynn0" path="res://Scenes/asteroid.tscn" id="7_754fn"]
+[ext_resource type="Script" uid="uid://i6sndhixxdtx" path="res://Scripts/enemy_spawner.gd" id="6_0f350"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k5f4k"]
 particle_flag_disable_z = true
@@ -23,12 +22,15 @@ linear_accel_max = 4.9999976
 scale_max = 5.0
 
 [node name="Level" type="Node2D" unique_id=848729001]
+script = ExtResource("1_0f350")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1383590401]
-offset_left = -12060.0
-offset_top = -9152.0
-offset_right = -7881.8726
-offset_bottom = -5764.0
+show_behind_parent = true
+z_index = -10
+offset_left = -11536.001
+offset_top = -9178.0
+offset_right = -7357.8735
+offset_bottom = -5790.0
 scale = Vector2(19.395237, 21.749447)
 texture = ExtResource("1_k5f4k")
 stretch_mode = 1
@@ -41,11 +43,12 @@ position = Vector2(507, -139)
 rotation = 3.1415927
 scale = Vector2(5.2169404, -3.6503236)
 stream = ExtResource("3_wqkje")
-volume_db = -30.0
-pitch_scale = 0.9
+volume_db = -15.0
 autoplay = true
 
 [node name="ParticleContainer" type="Node2D" parent="PlayerShip" unique_id=1724819902]
+show_behind_parent = true
+z_index = -1
 position = Vector2(-77, -502)
 scale = Vector2(1.2799993, 1)
 
@@ -56,15 +59,6 @@ amount = 500
 lifetime = 15.0
 preprocess = 10.0
 process_material = SubResource("ParticleProcessMaterial_k5f4k")
-
-[node name="Alien" parent="." unique_id=1812918639 instance=ExtResource("3_6phgx")]
-position = Vector2(1105, 199)
-
-[node name="Alien2" parent="." unique_id=961893478 instance=ExtResource("3_6phgx")]
-position = Vector2(1203, -1298)
-
-[node name="Alien3" parent="." unique_id=1889654738 instance=ExtResource("3_6phgx")]
-position = Vector2(-1810, -973)
 
 [node name="AsteroidContainer" type="Node2D" parent="." unique_id=1888078836]
 position = Vector2(-4939, -27)
@@ -247,42 +241,59 @@ scale = Vector2(5.216941, -3.650324)
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WallsContainer/StaticBody2D4" unique_id=1945858141]
 polygon = PackedVector2Array(971.6422, -311.7531, -1145.6904, -302.16516, -1232.5231, 180.53174, 964.93335, 84.92395)
 
-[node name="Star3" parent="." unique_id=674244907 instance=ExtResource("6_8c0lf")]
-position = Vector2(4034, 2361)
-scale = Vector2(1.002901, 1.121)
+[node name="EnemySpawner" type="Node2D" parent="." unique_id=1035206703]
+script = ExtResource("6_0f350")
 
-[node name="Star4" parent="." unique_id=1953683169 instance=ExtResource("6_8c0lf")]
-position = Vector2(-2359, -2220)
-scale = Vector2(1.002901, 1.121)
+[node name="SpawnPoint" type="Marker2D" parent="EnemySpawner" unique_id=1917121901]
+position = Vector2(1295, 462)
 
-[node name="Star5" parent="." unique_id=292186103 instance=ExtResource("6_8c0lf")]
-position = Vector2(3864, -2260)
-scale = Vector2(1.002901, 1.121)
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner" unique_id=1331055623]
 
-[node name="Star6" parent="." unique_id=1751733348 instance=ExtResource("6_8c0lf")]
-position = Vector2(1067.0002, 1639.9998)
-scale = Vector2(1.002901, 1.121)
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1581079470]
 
-[node name="Star7" parent="." unique_id=1139909842 instance=ExtResource("6_8c0lf")]
-position = Vector2(-2706, -83.000046)
-scale = Vector2(1.002901, 1.121)
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=585763535]
+offset_left = 45.0
+offset_top = 33.0
+offset_right = 136.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"
 
-[node name="Asteroid" parent="." unique_id=1069174953 instance=ExtResource("7_754fn")]
-position = Vector2(2472, -961)
-scale = Vector2(1.9527649, 1)
+[node name="LivesLabel" type="Label" parent="HUD" unique_id=32523775]
+offset_left = 1163.0
+offset_top = 24.0
+offset_right = 1254.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 24
+text = "Lives: 3"
 
-[node name="Asteroid4" parent="." unique_id=1650348010 instance=ExtResource("7_754fn")]
-position = Vector2(3191, 497)
-scale = Vector2(1.9527649, 1)
+[node name="GameOverLabel" type="Label" parent="HUD" unique_id=557787282]
+visible = false
+offset_left = 477.0
+offset_top = 295.0
+offset_right = 911.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 80
+text = "Game Over"
 
-[node name="Asteroid5" parent="." unique_id=1016576524 instance=ExtResource("7_754fn")]
-position = Vector2(-306, -1404)
-scale = Vector2(1.9527649, 1)
+[node name="YouWinLabel" type="Label" parent="HUD" unique_id=284007396]
+visible = false
+offset_left = 477.0
+offset_top = 295.0
+offset_right = 911.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 80
+text = "You Win!!!"
 
-[node name="Asteroid2" parent="." unique_id=1145445335 instance=ExtResource("7_754fn")]
-position = Vector2(-1631, 1526)
-scale = Vector2(1.9527649, 1)
+[node name="RestartButton" type="Button" parent="HUD" unique_id=1174251079]
+visible = false
+offset_left = 441.0
+offset_top = 449.0
+offset_right = 549.0
+offset_bottom = 485.0
+scale = Vector2(4.0457277, 3.9540787)
+theme_override_font_sizes/font_size = 20
+text = "Play Again"
 
-[node name="Asteroid3" parent="." unique_id=2040753981 instance=ExtResource("7_754fn")]
-position = Vector2(-3218, -1070)
-scale = Vector2(1.9527649, 1)
+[connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="HUD/RestartButton" to="." method="_on_restart_button_pressed"]

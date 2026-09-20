@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://datvi1oikmgmb"
+
+[deps]
+
+files=["res://Data/spawns.wait.translation", "res://Data/spawns.y.translation"]
+
+source_file="res://Data/spawns.csv"
+dest_files=["res://Data/spawns.wait.translation", "res://Data/spawns.y.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

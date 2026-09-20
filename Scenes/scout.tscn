@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://7um2g38y73yb"]
+
+[ext_resource type="Script" uid="uid://df3v466ta1sf0" path="res://Scripts/enemy.gd" id="1_w7ai2"]
+[ext_resource type="Texture2D" uid="uid://b4lgfdkacg6ng" path="res://Assets/scout.png" id="2_w7ai2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdm8w"]
+size = Vector2(275, 77)
+
+[node name="Scout" type="Area2D" unique_id=824246495]
+script = ExtResource("1_w7ai2")
+enemy_id = "enm_scout"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493616869]
+position = Vector2(3.5, -0.5)
+scale = Vector2(0.64, 1)
+shape = SubResource("RectangleShape2D_mdm8w")
+
+[node name="HpLabel" type="Label" parent="." unique_id=1312992829]
+offset_left = -21.0
+offset_top = -95.0
+offset_right = 20.0
+offset_bottom = -72.0
+text = "HP: #"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212876508 groups=["Enemy"]]
+position = Vector2(1, 1)
+texture = ExtResource("2_w7ai2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
