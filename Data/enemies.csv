@@ -1,4 +1,6 @@
 id,name,hp,speed,screen_time,ttk_laser,texture
 enm_scout,Scout Drone,20,400,4.8,0.4,scout
 enm_cruiser,Armored Cruiser,160,120,16.0,3.2,cruiser
-enm_alien,Alien,100,200,10.0,1.0,alien
+enm_alien,Alien,100,200,5.0,1.0,alien
+tiny_enm_alien,tinyAlien,50,400,5.0.0,1.0,tinyalien
+enm_juggernaut,juggernaut,200,25,5.0,2.0,juggernaut

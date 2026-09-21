@@ -49,6 +49,12 @@ func load_enemy_visual(id: String) -> void:
 
 		"enm_cruiser":
 			sprite.texture = preload("res://Assets/cruiser.png")
+		
+		"tiny_enm_alien":
+			sprite.texture = preload("res://Assets/tinyAlien.png")
+		
+		"enm_juggernaut":
+			sprite.texture = preload("res://Assets/juggernaut.png")
 
 
 

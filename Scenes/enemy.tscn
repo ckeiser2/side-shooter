@@ -24,6 +24,10 @@ script = ExtResource("1_1f0kj")
 position = Vector2(3.5, -9.5)
 shape = SubResource("RectangleShape2D_mdm8w")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212876508 groups=["Enemy"]]
+position = Vector2(1, 1)
+texture = ExtResource("2_afpow")
+
 [node name="HpLabel" type="Label" parent="." unique_id=1312992829]
 offset_left = -21.0
 offset_top = -95.0
@@ -31,10 +35,6 @@ offset_right = 20.0
 offset_bottom = -72.0
 text = "HP: #"
 metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212876508 groups=["Enemy"]]
-position = Vector2(1, 1)
-texture = ExtResource("2_afpow")
 
 [node name="DeathParticles" type="GPUParticles2D" parent="." unique_id=47636899]
 emitting = false
